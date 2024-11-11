@@ -1,15 +1,18 @@
 import express from 'express';
 import cors  from 'cors';
+import bodyParser from 'body-parser';
 
 const app=express();
 app.use(cors())
+app.use(bodyParser.json())
 
 app.get('/',(req,res)=>{
     res.write("from index.js")
 })
 
 app.post("/register",(req,res)=>{
-    console.log("from register")
+    const {name,email,password}=req.body;
+    console.log(name)
 })
 
 app.listen(3002,()=>{
