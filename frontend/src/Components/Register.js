@@ -16,10 +16,10 @@ function Register() {
     function handlesubmit(Event) {
         Event.preventDefault();
         console.table(AddUserDetails)
-        axios.post("https://ominous-adventure-4jwvwpj9jr9fqprr-3002.app.github.dev/register",AddUserDetails).then(()=>{
+        axios.post(`https://ominous-adventure-4jwvwpj9jr9fqprr-3002.app.github.dev/register`,AddUserDetails).then(()=>{
             console.log("data was submitted successfully")
         }).catch(()=>{
-            console.log('something went wrong')
+            console.log('something went wrong') 
         })
     }
     return (
